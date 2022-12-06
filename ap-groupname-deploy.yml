@@ -1,12 +1,12 @@
 resources:
   repositories:
     - repository: templates
-      endpoint: github.com_jossHD
+      endpoint: github-jossHD
       type: github
       name: jossHD/templates
       trigger: none
     - repository: policy-policyname
-      endpoint: github.com_jossHD
+      endpoint: github-jossHD
       type: github
       name: jossHD/policy-policyname
       trigger: none              
@@ -48,10 +48,10 @@ stages:
       runOnce:
         preDeploy:
           steps:
-          - template: jossHD/templates/ibm-gitops-pre-deploy.yml
+          - template: ibm-gitops-pre-deploy.yml@templates
             parameters:
               appOptions: ${{ parameters.appOptions }}
               appPolicies: ${{ parameters.appPolicies }}
         deploy:
           steps:
-          - template: jossHD/templates/ibm-gitops-deploy.yml
+          - template: ibm-gitops-deploy.yml@templates
