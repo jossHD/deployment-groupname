@@ -15,7 +15,7 @@ trigger:
 - main
 
 pool:
-  name: PoC IBK
+  name: Default
 
 parameters:
 - name: appOptions
