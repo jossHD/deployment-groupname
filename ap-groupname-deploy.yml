@@ -15,7 +15,7 @@ trigger:
 - main
 
 pool:
-  name: PoC IBK
+  name: Azure Pipelines
 
 parameters:
 - name: appOptions
