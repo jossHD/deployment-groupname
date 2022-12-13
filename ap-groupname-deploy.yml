@@ -14,8 +14,7 @@ resources:
 trigger:
 - main
 
-pool:
-  name: Azure Pipelines
+pool: Azure Pipelines
 
 parameters:
 - name: appOptions
